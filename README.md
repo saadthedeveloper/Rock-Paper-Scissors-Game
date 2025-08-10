@@ -22,3 +22,6 @@ Features a clean, modern design and dynamic score tracking for both the user and
    git clone https://github.com/your-username/rock-paper-scissors.git
 1. Open index.html in your browser.
 2. Play and enjoy!
+
+## 📄 License
+This project is licensed under the MIT License — see the [LICENSE](LICENSE) file for details.
