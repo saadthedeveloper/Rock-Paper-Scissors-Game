@@ -27,14 +27,18 @@ Rock-Paper-Scissors-Game/
 ├── style.css        # Styling and responsiveness
 ├── script.js        # Game logic
 └── Images/          # Rock, Paper, Scissors icons, screenshot.webp
-
+```
 
 ## ⚙️ How to Run
 # Clone this repository
+```markdown
 git clone https://github.com/saadthedeveloper/Rock-Paper-Scissors-Game.git
+```
 
 # Open the project folder
+```markdown
 cd Rock-Paper-Scissors-Game
+```
 
 # Run by opening index.html in your browser
 
@@ -56,13 +60,19 @@ cd Rock-Paper-Scissors-Game
 ## 🤝 Contributing
 # 1. Fork the repo
 # 2. Create a new branch
+```markdown
 git checkout -b feature-name
+```
 
 # 3. Commit your changes
+```markdown
 git commit -m "Added feature-name"
+```
 
 # 4. Push to your fork
+```markdown
 git push origin feature-name
+```
 
 # 5. Create a Pull Request
 
