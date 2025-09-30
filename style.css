@@ -1,173 +1,164 @@
+/* =========================
+   Root Variables
+========================= */
+:root {
+  --bg-color: #000;
+  --text-color: #fff;
+  --font-family: "Oxanium", system-ui;
+  --highlight-bg: rgba(240, 248, 255, 0.174);
+
+  --size-sm: 100px;
+  --size-md: 130px;
+  --size-lg: 200px;
+
+  --font-sm: 1rem;
+  --font-md: 1.2rem;
+  --font-lg: 1.4rem;
+
+  --line-height-default: 3rem;
+  --line-height-lg: 5rem;
+}
+
+/* =========================
+   Reset
+========================= */
 * {
-    padding: 0;
-    margin: 0;
-    text-align: center;
+  margin: 0;
+  padding: 0;
+  text-align: center;
 }
 
+/* =========================
+   Base Styles
+========================= */
 body {
-    background-color: rgb(0, 0, 0);
-    color: white;
-    font-family: "Oxanium", system-ui;
-    display: flex;
-    flex-direction: column;
-    gap: 50px;
-    margin-top: 50px;
-}
-
-img {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    border-radius: 50%;
-}
-
-.choice {
-    width: 170px;
-    height: 170px;
-    object-fit: cover;
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+  background-color: var(--bg-color);
+  color: var(--text-color);
+  font-family: var(--font-family);
+  display: flex;
+  flex-direction: column;
+  gap: 50px;
+  margin-top: 50px;
 }
 
 h1 {
-    line-height: 5rem;
+  line-height: var(--line-height-lg);
 }
 
-#choices {
-    display: flex;
-    justify-content: center;
-    align-items: center;
-
+img {
+  width: 170px;
+  height: 170px;
+  object-fit: cover;
+  border-radius: 50%;
+  transition: 80ms;
 }
 
 img:hover {
-    translate: 0 -5px;
-    transition: 80ms;
-    cursor: pointer;
+  translate: 0 -5px;
+  cursor: pointer;
+}
+
+.choice {
+  width: 170px;
+  height: 170px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+#choices {
+  display: flex;
+  justify-content: center;
+  align-items: center;
 }
 
 .score-board {
-    font-size: 2rem;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
+  font-size: 2rem;
+  display: flex;
+  justify-content: space-around;
+  align-items: center;
 }
 
 #message-container {
-
-    font-size: 20px;
-    background-color: rgba(240, 248, 255, 0.174);
-    padding: 20px;
+  font-size: 20px;
+  background-color: var(--highlight-bg);
+  padding: 20px;
 }
 
 #computer-score,
 #user-score {
-    background-color: rgba(240, 248, 255, 0.174);
-    border-radius: 20px;
-    margin-bottom: 10px;
-
+  background-color: var(--highlight-bg);
+  border-radius: 20px;
+  margin-bottom: 10px;
 }
-
-
 
 .score {
-
-    width: 40%;
-
+  width: 40%;
 }
 
+/* =========================
+   Media Queries
+========================= */
 @media (min-width: 100px) {
+  img {
+    width: var(--size-sm);
+    height: var(--size-sm);
+  }
 
-    img {
-        width: 100px;
-        height: 100px;
+  h1 {
+    line-height: var(--line-height-default);
+    font-size: 28px;
+  }
 
-    }
+  #message-container {
+    font-size: var(--font-sm);
+  }
 
-    .choice {
-        width: none;
-        height: none;
-
-    }
-
-    h1 {
-        line-height: 3rem;
-        font-size: 28px;
-    }
-
-    #message-container {
-
-        font-size: 1rem;
-      
-    }
-
-    .score-board {
-        font-size: 1rem;
-    
-    }
+  .score-board {
+    font-size: var(--font-sm);
+  }
 }
 
-@media (min-width: 550px){
-    img {
-        width: 130px;
-        height: 130px;
+@media (min-width: 550px) {
+  img {
+    width: var(--size-md);
+    height: var(--size-md);
+  }
 
-    }
+  h1 {
+    line-height: var(--line-height-default);
+    font-size: 38px;
+  }
 
-    .choice {
-        width: none;
-        height: none;
-      
+  #message-container {
+    font-size: var(--font-md);
+  }
 
-    }
-
-    h1 {
-        line-height: 3rem;
-        font-size: 38px;
-    }
-
-    #message-container {
-
-        font-size: 1.2rem;
-       
-    }
-
-    .score-board {
-        font-size: 1.2rem;
-    
-    }
+  .score-board {
+    font-size: var(--font-md);
+  }
 }
 
-@media (min-width: 750px){
-    img {
-        width: 200px;
-        height: 200px;
+@media (min-width: 750px) {
+  img {
+    width: var(--size-lg);
+    height: var(--size-lg);
+  }
 
-    }
+  .choice {
+    padding: 43px;
+  }
 
-    .choice {
-        width: none;
-        height: none;
-        padding: 43px;
+  h1 {
+    line-height: var(--line-height-default);
+    font-size: 54px;
+  }
 
-    }
+  #message-container {
+    font-size: var(--font-lg);
+  }
 
-    h1 {
-        line-height: 3rem;
-        font-size: 54px;
-    }
-
-    #message-container {
-
-        font-size: 1.4rem;
-      
-    }
-
-    .score-board {
-        font-size: 1.4rem;
-        
-    }
+  .score-board {
+    font-size: var(--font-lg);
+  }
 }
-
